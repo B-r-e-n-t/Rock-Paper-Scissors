@@ -14,7 +14,10 @@
         margin-left: 100px;
         margin-right: 100px;
         font-size: 40px;
+        color: #1f2937;
+        border: 25px red;
     }
+    
     .container-1 {
         background-color: #1f2937;
         display: flex;
@@ -25,6 +28,19 @@
     .rock {
         padding-left: 20px;
         padding-top: 10px;
+        background-color: transparent;
+    }
+    #rockbutton {
+        background-color: transparent;
+        border: 0px;
+    }
+    #paperbutton{
+        background-color: transparent;
+        border: 0px;
+    }
+    #scissorsbutton {
+        background-color: transparent;
+        border: 0px;
     }
     .container-2 {
         background-color: #1f2937;
@@ -34,6 +50,7 @@
         margin-top: 100px;
         font-size: 50px;
         justify-content: center;
+        border: 30px red;
     }
     
     .score-2 {
@@ -51,20 +68,16 @@
         display: flex;
         justify-content: center;
     }
-    .restart-game {
+    .container-3 {
         display: flex;
         justify-content: center;
     }
-.restartbutton {
-    size: 50px;
-}
-
 
 </style>
 
 <body>
     <div class="header">
-        <p style="color: #1f2937;">Your town is being bought by a ruthless man known only by the name Apple Sauce. He is going to force every 
+        <p>Your town is being bought by a ruthless man known only by the name Apple Sauce. He is going to force every 
             citizen to grow apples and make apple sauce. He is obsessed with Apple Sauce. The only
             way to save your town is to beat Apple Sauce to 5 points in Rock, Paper, Scissors. Save your town
             from Apple Sauce, both the man and the children's snack! Make your selection below.
@@ -91,11 +104,14 @@
             <p class="computer-score" id="computer-score" style="color: white"> 0 </p>
         </div>
     </div>
+
     <h1 class="results" id="results" style="color: goldenrod"></h1>
 
-<div class="restart-game">
-    <button onClick="window.location.reload();" id="restartbutton">Restart Game</button>
-</div>
+    <div class="container-3">
+        <div id="restart-button">
+            <button onClick="window.location.reload();">Restart Game</button>
+        </div>
+    </div>
 
 
 
