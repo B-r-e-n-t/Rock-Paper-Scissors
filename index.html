@@ -4,76 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-
-<style>
-    
-    .header {
-        display: flex;
-        margin-left: 100px;
-        margin-right: 100px;
-        font-size: 40px;
-        color: #1f2937;
-        border: 25px red;
-    }
-    
-    .container-1 {
-        background-color: #1f2937;
-        display: flex;
-        margin-left: 300px;
-        margin-right: 300px;
-        justify-content: space-between;
-    }
-    .rock {
-        padding-left: 20px;
-        padding-top: 10px;
-        background-color: transparent;
-    }
-    #rockbutton {
-        background-color: transparent;
-        border: 0px;
-    }
-    #paperbutton{
-        background-color: transparent;
-        border: 0px;
-    }
-    #scissorsbutton {
-        background-color: transparent;
-        border: 0px;
-    }
-    .container-2 {
-        background-color: #1f2937;
-        display: flex;
-        margin-left: 400px;
-        margin-right: 400px;
-        margin-top: 100px;
-        font-size: 50px;
-        justify-content: center;
-        border: 30px red;
-    }
-    
-    .score-2 {
-        margin-left: 150px;
-    }
-    
-    .player-score {
-        margin-left: 100px;
-    }
-
-    .computer-score {
-        margin-left: 200px;
-    }
-    .results {
-        display: flex;
-        justify-content: center;
-    }
-    .container-3 {
-        display: flex;
-        justify-content: center;
-    }
-
-</style>
 
 <body>
     <div class="header">
@@ -108,123 +41,10 @@
     <h1 class="results" id="results" style="color: goldenrod"></h1>
 
     <div class="container-3">
-        <div id="restart-button">
-            <button onClick="window.location.reload();">Restart Game</button>
-        </div>
+            <button onClick="window.location.reload();" id="restartbutton">Restart Game</button>
     </div>
 
 
-
+    <script src="script.js"></script>
 </body>
 </html>
-
-<script>
-
-        const playerScore = document.getElementById('player-score');
-        const computerScore = document.getElementById('computer-score');
-        const results = document.getElementById('results');
-        const rockButton = document.getElementById('rockbutton');
-        const paperButton = document.getElementById('paperbutton');
-        const scissorsButton = document.getElementById('scissorsbutton');
-
-const score = {
-    player: 0,
-    computer: 0,
-};
-function computerPlay () {
-  const randomNumber = Math.floor(Math.random()*3);
-  switch (randomNumber) {
-    case 0:
-      return 'rock';
-    case 1:
-      return 'paper';
-    case 2:
-      return 'scissors';
-  };
-}
-
-function playRound (playerselection, computerselection) {
-    if (playerselection==='paper'){
-        if (computerselection==='rock'){
-            return 'You win! Paper beats rock.'
-        }
-        if (computerselection==='scissors'){
-            return 'You lose! Scissors beat paper'
-        }
-        if (computerselection==='paper'){
-            return 'You tie! Apple Sauce also chose paper'
-        }
-    }
-
-    if (playerselection==='rock'){
-        if (computerselection==='rock'){
-            return 'You tie! Apple Sauce also chose rock'
-        }
-        if (computerselection==='scissors'){
-            return 'You win! Rock beats scissors'
-        }
-        if (computerselection==='paper'){
-            return 'You lose! Paper beats rock'
-        }
-    }
-
-    if (playerselection==='scissors'){  
-        if (computerselection==='rock'){
-            return 'You lose! Rock beats scissors'
-        }
-        if (computerselection==='scissors'){
-            return 'You tie! Apple Sauce also chose scissors'
-        }
-        if (computerselection==='paper'){
-            return 'You win! Scissors beats paper'
-        }
-    }
-
-}
-
-function startRound (playerselection){
-   const result=playRound(playerselection,computerPlay());
-        if (result.includes('win') ) {
-            score.player +=1
-        }
-        if (result.includes('lose') ) {
-            score.computer +=1
-        } 
-        
-        playerScore.innerText=score.player;
-        computerScore.innerText=score.computer;
-        results.innerText= isGameOver() ? isGameOver() : result;
-
-    } 
-
-    function disableBtn() {
-            rockButton.disabled = true;
-            paperButton.disabled = true;
-            scissorsButton.disabled = true;
-            debugger;
-        
-}
-
-    function isGameOver () {
-        if (score.player===5) {
-            disableBtn()
-            return 'You win the game! Apple Sauce will leave your town!'
-            debugger
-            
-        }
-    
-    if (score.computer===5) {
-            disableBtn()
-            return 'You lose the game! I hope you really like apple sauce!'
-            debugger
-            
-    }
-    return false;
-}
-
-
-
-
-
-
-</script>

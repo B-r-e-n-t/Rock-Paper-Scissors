@@ -1,0 +1,90 @@
+body {
+    background-color: #1f2937;
+}
+
+.header {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 40px;
+    color: white;
+    margin-top: 15px;
+}
+
+.container-1 {
+    background-color: #1f2937;
+    display: flex;
+    margin-left: 300px;
+    margin-right: 300px;
+    justify-content: space-between;
+}
+.rock {
+    padding-left: 20px;
+    padding-top: 10px;
+    background-color: transparent;
+}
+#rockbutton {
+    background-color: transparent;
+    border: 0px;
+}
+#rockbutton:hover {
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.09);
+}
+#paperbutton{
+    background-color: transparent;
+    border: 0px;
+}
+#paperbutton:hover {
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.09);
+}
+#scissorsbutton {
+    background-color: transparent;
+    border: 0px;
+}
+#scissorsbutton:hover {
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.09);
+}
+.container-2 {
+    background-color: #1f2937;
+    display: flex;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 100px;
+    font-size: 30px;
+    justify-content: center;
+}
+
+.score-2 {
+    margin-left: 150px;
+}
+
+.player-score {
+    margin-left: 100px;
+}
+
+.computer-score {
+    margin-left: 200px;
+}
+.results {
+    display: flex;
+    justify-content: center;
+}
+.container-3 {
+    display: flex;
+    justify-content: center;
+}
+#restartbutton {
+    font-size: 4rem;
+    border-radius: 6px;
+}
+#restartbutton:hover {
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(2);
+}
