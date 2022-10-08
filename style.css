@@ -65,11 +65,15 @@ body {
 }
 
 .player-score {
-    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .computer-score {
-    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .results {
     display: flex;
